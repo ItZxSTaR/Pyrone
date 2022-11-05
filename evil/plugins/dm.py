@@ -15,7 +15,7 @@ async def dmfuck(xspam: Client, e: Message):
         else:
             for msg in OneWord:
                 await xspam.send_message(id, msg)
-                await asyncio.sleep(0.1)
+                await asyncio.sleep(0.5)
     else:
         ok = await xspam.get_users(dmpy[1])
         id = ok.id
@@ -24,7 +24,7 @@ async def dmfuck(xspam: Client, e: Message):
         else:
             for msg in OneWord:
                 await xspam.send_message(id, msg)
-                await asyncio.sleep(0.1)
+                await asyncio.sleep(0.5)
 
 
 @Client.on_message(filters.user(SUDO_USERS) & filters.command(["dmspam"], ["."]))
@@ -42,7 +42,7 @@ async def dmspam(xspam: Client, e: Message):
         else:
             for _ in range(int(dmpy[1])):
                 await xspam.send_message(id, dmpy[2])
-                await asyncio.sleep(0.2)
+                await asyncio.sleep(0.5)
     elif len(dmpy) == 4:
         ok = await xspam.get_users(dmpy[1])
         id = ok.id
@@ -51,6 +51,6 @@ async def dmspam(xspam: Client, e: Message):
         else:
             for _ in range(int(dmpy[2])):
                 await xspam.send_message(id, dmpy[3])
-                await asyncio.sleep(0.1)
+                await asyncio.sleep(0.5)
     else:
         await e.reply_text(usage)

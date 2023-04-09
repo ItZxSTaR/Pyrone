@@ -1,66 +1,34 @@
 {
-    "name": "x",
-    "keywords": ["telegram"],
-    "stack": "container",
+    "name": "Pyrone",
+    "logo": "https://te.legra.ph/file/07d39b85c6cea32f15259.jpg",
+    "keywords": [
+      "telegram",
+      "bot",
+      "Altron"
+    ],
+      "buildpacks": [{
+      "url": "heroku/python"
+    }],
     "env": {
-        "SESSION": {
-            "description": "pyrogram v1.4 string session here",
+        "SESSION1": {
+            "value": "",
             "required": true
         },
         "SESSION2": {
-            "description": "pyrogram v1.4 string session here",
+            "value": "",
             "required": false
         },
         "SESSION3": {
-            "description": "pyrogram v1.4 string session here",
+            "value": "",
             "required": false
         },
         "SESSION4": {
-            "description": "pyrogram v1.4 string session here",
+            "value": "",
             "required": false
         },
         "SESSION5": {
-            "description": "pyrogram v1.4 string session here",
+            "value": "",
             "required": false
-        },
-        "SESSION6": {
-            "description": "pyrogram v1.4 string session here",
-            "required": false
-        },
-        "SESSION7": {
-            "description": "pyrogram v1.4 string session here",
-            "required": false
-        },
-        "SESSION8": {
-            "description": "pyrogram v1.4 string session here",
-            "required": false
-        },
-        "SESSION9": {
-            "description": "pyrogram v1.4 string session here",
-            "required": false
-        },
-        "SESSION10": {
-            "description": "pyrogram v1.4 string session here",
-            "required": false
-        },
-        "API_ID": {
-            "description": "telegram api id here",
-            "value": "25981592",
-            "required": true
-        },
-        "SUDO_USERS": {
-            "description": "Who have Access Your Account But Rearly Plugins there",
-            "required": true
-        },
-        "API_HASH": {
-            "description": "telegram api hash here",
-            "value": "709f3c9d34d83873d3c7e76cdd75b866",
-            "required": true
         }
-    },
-    "buildpacks": [
-    {
-      "url": "heroku/python"
     }
-  ]
-}
+  }

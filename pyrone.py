@@ -1,6 +1,6 @@
 import sys
 import asyncio
-
+from pyrogram.enums import ChatAction
 from os import execle, getenv, environ
 
 from pyrogram import Client, filters, idle
@@ -92,7 +92,7 @@ async def pyrone(client: Client, message: Message):
     
     try:
         for word in ONE_WORDS:
-            await client.send_chat_action(chat_id, "typing")
+            await client.send_chat_action(chat_id, ChatAction.TYPING)
             await client.send_message(chat_id, word, reply_to_message_id=ruser)
             await asyncio.sleep(0.3)
     except FloodWait:
